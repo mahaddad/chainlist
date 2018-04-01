@@ -5,7 +5,12 @@ contract ChainList {
   address seller;
   string name;
   string description;
-  uint256 price; //unsigned integer of 256 bits, security concern?
+  uint256 price;
+
+// constructor
+function ChainList() public {
+  sellArticle("Default article", "This is an article set by default", 10000000000000000);
+}
 
   //sell article
   function sellArticle(string _name, string _descrption, uint256 _price) public {
